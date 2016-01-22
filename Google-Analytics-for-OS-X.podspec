@@ -16,7 +16,9 @@ Pod::Spec.new do |s|
   s.platform     = :osx, '10.9'
   s.requires_arc = true
 
-  s.source_files = 'GoogleAnalyticsTracker/**/*.{h,m}'
-  s.resources = 'GoogleAnalyticsTracker/**/*.xib'
+  s.source_files = "GoogleAnalyticsTracker/**/*.{h,m}"
+  s.resources = "GoogleAnalyticsTracker/**/*.xib"
   s.public_header_files = "GoogleAnalyticsTracker/**/*.h"
+  s.module_name = "GoogleAnalyticsTracker"
+  s.header_dir = "GoogleAnalyticsTracker"
 end
