@@ -42,5 +42,5 @@ There is a special debug window included in the framework. It can be used by dev
 
 #License
 
-Swifter is licensed under the MIT License. See the LICENSE file for more information.
+Google-Analytics-for-OS-X is licensed under the MIT License. See the LICENSE file for more information.
 
