@@ -246,7 +246,11 @@ static id _sharedInstance = nil;
     for (NSString *key in requestDictionary)
     {
         NSString *stringValue = [NSString stringWithFormat:@"%@", requestDictionary[key]];
-        NSString *escapedValue = [stringValue stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+        NSString *escapedValue = (__bridge_transfer NSString*)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                                                                      (__bridge CFStringRef)stringValue,
+                                                                                                      NULL,
+                                                                                                      (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                                                                      kCFStringEncodingUTF8);
         [result appendFormat:@"&%@=%@", key, escapedValue];
     }
     [result appendString:self.systemInfo];
