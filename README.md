@@ -1,5 +1,5 @@
 # Google-Analytics-for-OS-X
-Google Analytics SDK for OS X
+Google Analytics SDK for mac OS
 
 This is an Objective-C wrapper around [Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1/devguide)
 
